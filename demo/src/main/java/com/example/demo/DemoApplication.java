@@ -34,7 +34,7 @@ public class DemoApplication {
 				"Since i am new to swagger used the JavaBrains tutorial",
 				"1.0",
 				"I 'ould like to receive your feedback even if I did not pass",
-				new springfox.documentation.service.Contact("Itzhak Tadela", "https://github.com/isaacTadela" , "iitzhakk@gmail.com"),
+				new springfox.documentation.service.Contact("Itzhak Tadela", "https://github.com/isaacTadela/spring-boot" , "iitzhakk@gmail.com"),
 				"API License",
 				"https://github.com/isaacTadela",
 				Collections.emptyList()
