@@ -22,10 +22,10 @@ public class DemoApplication {
 	
 	@Bean
 	public Docket swaggerConfiguration() {
-		// Return a prepared Docket instance
+		// Return a prepared Docket instance(not docker)
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select().apis(RequestHandlerSelectors.basePackage("com.example.demo"))
-				.build();
+				.build().apiInfo(apiDettails());
 	}
 	
 	private ApiInfo apiDettails() {
@@ -39,7 +39,6 @@ public class DemoApplication {
 				"https://github.com/isaacTadela",
 				Collections.emptyList()
 				);
-		
 	}
 
 }

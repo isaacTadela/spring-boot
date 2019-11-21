@@ -9,14 +9,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.annotations.ApiOperation;
-import springfox.documentation.service.Contact;
 
 @RestController
-@RequestMapping("/api")
+//@RequestMapping("/api")
 public class ItemController {
 
 	@Autowired
@@ -29,28 +27,28 @@ public class ItemController {
 	
 	@GetMapping("/items")
 	@ApiOperation( value = "List of the inventory", 
-	notes = "Find all the items in the inventory", response = Contact.class)
+	notes = "Find all the items in the inventory", response = Item.class)
 	public List<Item> getAllItems() {
 		return itemService.getAllItems();
 	}
 	
 	@PostMapping("/items")
 	@ApiOperation( value = "Add an items to stock", 
-	notes = "Add an item to the stock from the request body", response = Contact.class)
+	notes = "Add an item to the stock from the request body", response = Item.class)
 	public Item addItem(@RequestBody Item item) {
 		return itemService.addItem(item);
 	}
 
 	@GetMapping("/items/{no}")
 	@ApiOperation( value = "Read item details by item no", 
-	notes = "Find a specific item by the item's no", response = Contact.class)
+	notes = "Find a specific item by the item's no", response = Item.class)
 	public Item getItem(@PathVariable String no) {
 		return itemService.getItem(no);
 	}
 	
 	@PutMapping("/items/{no}/w/{quantity}")
 	@ApiOperation( value = "Withdrawal quantity of a specific item from stock", 
-	notes = "Make a withdrawal of the item assuming that quantity exists in the inventory and return it with the new quantity", response = Contact.class)
+	notes = "Make a withdrawal of the item assuming that quantity exists in the inventory and return it with the new quantity", response = Item.class)
 	public Item withdrawalItem(@PathVariable String no, @PathVariable String quantity) {
 		Item item = itemService.getItem(no);
 		String currQuantity = item.getAmount() ;
@@ -67,7 +65,7 @@ public class ItemController {
 
 	@PutMapping("/items/{no}/d/{quantity}")
 	@ApiOperation( value = "Deposit quantity of a specific item to stock", 
-	notes = "Make a deposit of an item and return it with the new quantity", response = Contact.class)
+	notes = "Make a deposit of an item and return it with the new quantity", response = Item.class)
 	public Item depositItem(@PathVariable String no, @PathVariable String quantity) {
 		Item item = itemService.getItem(no);
 		String currQuantity = item.getAmount() ;
@@ -78,7 +76,7 @@ public class ItemController {
 	
 	@DeleteMapping("/items/{no}")
 	@ApiOperation( value = "Delete an item from stock", 
-	notes = "Delete an item and return it", response = Contact.class)
+	notes = "Delete an item and return it", response = Item.class)
 	public Item deleteItem(@PathVariable("no") String no) {
 		return itemService.deleteItem(no);
 	}
