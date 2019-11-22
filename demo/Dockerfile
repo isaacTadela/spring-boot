@@ -1,3 +1,4 @@
-From openjdk:8
-copy ./target/employee-producer-0.0.1-SNAPSHOT.jar employee-producer-0.0.1-SNAPSHOT.jar
-CMD ["java","-jar","demo-0.0.1-SNAPSHOT.jar"]
+From openjdk:8-jdk-alpine
+EXPOSE 8080
+COPY target/demo-0.0.1-SNAPSHOT.jar /demo-0.0.1-SNAPSHOT.jar
+CMD ["java" , "-jar", "/demo-0.0.1-SNAPSHOT.jar"]
