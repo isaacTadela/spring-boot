@@ -10,9 +10,9 @@ The following is a job qualification exercise which requires knowledge in the fo
 
 The application expose the following APIs:
 
--List of the inventory items list (item no, name, amount, inventory code): http request	         *GET	/items
+-List of the inventory items list (item no, name, amount, inventory code):      *GET	/items
 
--Read item details (by item no): http request				                                             *GET	/items/no
+-Read item details (by item no):       *GET	/items/no
 
 -Withdrawal quantity of a specific item from stock: http request			                          *PUT	/items/no/w/{num}
 
