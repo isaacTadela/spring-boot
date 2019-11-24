@@ -10,19 +10,20 @@ The following is a job qualification exercise which requires knowledge in the fo
 
 The application expose the following APIs:
 
--List of the inventory items list (item no, name, amount, inventory code)	      *GET	/items
+-List of the inventory items list (item no, name, amount, inventory code)	        *GET	/items
 
--Read item details (by item no)					                                        *GET	/items/no
+-Read item details (by item no)					                                          *GET	/items/no
 
--Withdrawal quantity of a specific item from stock			                        *PUT	/items/no/w/{num}
+-Withdrawal quantity of a specific item from stock			                          *PUT	/items/no/w/{num}
 
--Deposit quantity of a specific item to stock				                            *PUT	/items/no/d/{num}
+-Deposit quantity of a specific item to stock				                              *PUT	/items/no/d/{num}
 
--Add item to stock							                                                *POST	/items
+-Add item to stock							                                                  *POST	/items
 
--Delete an item from stock  						                                        *DELETE	/items/no
+-Delete an item from stock  						                                          *DELETE	/items/no
 
 -Data persisted on H2 DB using JPA.				
+
 -The application pack and run from docker.
 
 In the future i will creating Angular pages which enable to create/read/update and/delete the item,
