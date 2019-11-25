@@ -37,4 +37,4 @@ In the future i will creating Angular pages which enable to create/read/update a
 and in the meanwhile you can use Postman to see the resposes.
 
 You can find the docker imarg here:
-https://hub.docker.com/repository/docker/iitzhakk/spring-inventory
+https://hub.docker.com/r/iitzhakk/spring-inventory
