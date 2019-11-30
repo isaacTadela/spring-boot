@@ -1,6 +1,6 @@
 Spring-boot application with a REST controller, which expose a Swagger API catalog
 
-The following is a job qualification exercise which requires knowledge in the following technologies:
+The following is a job qualification exercise which uses following technologies:
 
 - Java
 - Spring boot 
