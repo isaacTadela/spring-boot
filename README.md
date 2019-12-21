@@ -1,6 +1,8 @@
+# Inventory microservice
 Spring-boot application with a REST controller, which expose a Swagger API catalog
 
-The following is a job qualification exercise which uses following technologies:
+## Built With
+The following technologies:
 
 - Java
 - Spring boot 
